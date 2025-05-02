@@ -28,4 +28,11 @@ table {
 td {
   height: 150px;
   width: 150px;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
