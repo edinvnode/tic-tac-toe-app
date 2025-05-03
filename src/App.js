@@ -9,15 +9,13 @@ function App() {
   const [result, setResult] = useState(false);
 
   const handleClick = (index) => {
-    if (counter > 9) {
-      setResult(true);
-      return;
-    }
     if (counter === 0 || counter % 2 === 0) {
       const updateFields = [...newFields];
-      if (updateFields[index] === '') updateFields[index] = 'X';
-      setNewFields(updateFields);
-      setCounter(counter + 1);
+      if (updateFields[index] === '') {
+        updateFields[index] = 'X';
+        setNewFields(updateFields);
+        setCounter(counter + 1);
+      }
 
       //check if there are 3 in a row or a column or diagonally
 
@@ -88,10 +86,11 @@ function App() {
 
     if (counter % 2 !== 0) {
       const updateFields = [...newFields];
-      if (updateFields[index] === '') updateFields[index] = 'O';
-      setNewFields(updateFields);
-      setCounter(counter + 1);
-
+      if (updateFields[index] === '') {
+        updateFields[index] = 'O';
+        setNewFields(updateFields);
+        setCounter(counter + 1);
+      }
       //check if there are 3 in a row or a column or diagonally
 
       if (
@@ -162,6 +161,11 @@ function App() {
     console.log(index);
     console.log(fields[index]);
     console.log(newFields);
+
+    if (counter > 8) {
+      setResult(true);
+      return;
+    }
   };
 
   return (
@@ -175,7 +179,7 @@ function App() {
           </div>
         ))}
       </div>
-      {setResult && <div className="result">Game Over</div>}
+      {result && <div className="result">Game Over</div>}
     </div>
   );
 }
