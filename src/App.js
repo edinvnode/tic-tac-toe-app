@@ -7,6 +7,7 @@ function App() {
   const [counter, setCounter] = useState(0);
   const [newFields, setNewFields] = useState(fields);
   const [result, setResult] = useState(false);
+  const [resultMessage, setResultMessage] = useState('');
 
   const handleClick = (index) => {
     if (counter === 0 || counter % 2 === 0) {
@@ -24,7 +25,8 @@ function App() {
         updateFields[1] === 'X' &&
         updateFields[2] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
 
       if (
@@ -32,7 +34,8 @@ function App() {
         updateFields[4] === 'X' &&
         updateFields[5] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
 
       if (
@@ -40,7 +43,8 @@ function App() {
         updateFields[7] === 'X' &&
         updateFields[8] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
 
       if (
@@ -48,7 +52,8 @@ function App() {
         updateFields[3] === 'X' &&
         updateFields[6] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
 
       if (
@@ -56,7 +61,8 @@ function App() {
         updateFields[4] === 'X' &&
         updateFields[7] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
 
       if (
@@ -64,7 +70,8 @@ function App() {
         updateFields[5] === 'X' &&
         updateFields[8] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
 
       if (
@@ -72,7 +79,8 @@ function App() {
         updateFields[4] === 'X' &&
         updateFields[8] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
 
       if (
@@ -80,7 +88,8 @@ function App() {
         updateFields[4] === 'X' &&
         updateFields[6] === 'X'
       ) {
-        alert('X won');
+        setResult(true);
+        setResultMessage('Player X has won');
       }
     }
 
@@ -98,7 +107,8 @@ function App() {
         updateFields[1] === 'O' &&
         updateFields[2] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
 
       if (
@@ -106,7 +116,8 @@ function App() {
         updateFields[4] === 'O' &&
         updateFields[5] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
 
       if (
@@ -114,7 +125,8 @@ function App() {
         updateFields[7] === 'O' &&
         updateFields[8] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
 
       if (
@@ -122,7 +134,8 @@ function App() {
         updateFields[3] === 'O' &&
         updateFields[6] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
 
       if (
@@ -130,7 +143,8 @@ function App() {
         updateFields[4] === 'O' &&
         updateFields[7] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
 
       if (
@@ -138,7 +152,8 @@ function App() {
         updateFields[5] === 'O' &&
         updateFields[8] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
 
       if (
@@ -146,7 +161,8 @@ function App() {
         updateFields[4] === 'O' &&
         updateFields[8] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
 
       if (
@@ -154,7 +170,8 @@ function App() {
         updateFields[4] === 'O' &&
         updateFields[6] === 'O'
       ) {
-        alert('O won');
+        setResult(true);
+        setResultMessage('Player O has won');
       }
     }
 
@@ -179,7 +196,7 @@ function App() {
           </div>
         ))}
       </div>
-      {result && <div className="result">Game Over</div>}
+      {result && <div className="result">Game Over {resultMessage}</div>}
     </div>
   );
 }
