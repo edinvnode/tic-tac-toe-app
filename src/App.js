@@ -220,6 +220,7 @@ function App() {
             className="cell"
             onClick={!result ? () => handleClick(index) : undefined}
             key={index}
+            style={{ backgroundColor: field !== '' ? 'yellow' : 'white' }}
           >
             <Cell text={field} />
           </div>

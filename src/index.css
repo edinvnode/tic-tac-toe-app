@@ -7,22 +7,14 @@
 
 h1 {
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-table,
-tr,
-td {
-  border: 1px solid black;
-}
-
-table {
-  margin-top: 20px;
 }
 
 .cell {
@@ -35,6 +27,8 @@ table {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: green;
+  font-size: 32px;
 }
 
 .container {
@@ -49,6 +43,7 @@ table {
   color: green;
   display: flex;
   flex-direction: column;
+  font-size: 32px;
 }
 
 .restart-button {
