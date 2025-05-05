@@ -27,6 +27,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
 
       if (
@@ -36,6 +37,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
 
       if (
@@ -45,6 +47,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
 
       if (
@@ -54,6 +57,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
 
       if (
@@ -63,6 +67,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
 
       if (
@@ -72,6 +77,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
 
       if (
@@ -81,6 +87,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
 
       if (
@@ -90,6 +97,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player X has won');
+        setCounter(0);
       }
     }
 
@@ -109,6 +117,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
 
       if (
@@ -118,6 +127,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
 
       if (
@@ -127,6 +137,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
 
       if (
@@ -136,6 +147,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
 
       if (
@@ -145,6 +157,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
 
       if (
@@ -154,6 +167,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
 
       if (
@@ -163,6 +177,7 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
 
       if (
@@ -172,17 +187,27 @@ function App() {
       ) {
         setResult(true);
         setResultMessage('Player O has won');
+        setCounter(0);
       }
     }
 
-    console.log(index);
-    console.log(fields[index]);
-    console.log(newFields);
+    //console.log(index);
+    //console.log(fields[index]);
+    //console.log(newFields);
 
-    if (counter > 8) {
+    if (counter > 7) {
       setResult(true);
+      setResultMessage("It's a tie.");
+      setCounter(0);
       return;
     }
+  };
+
+  const handleRestart = () => {
+    const updateFields = ['', '', '', '', '', '', '', '', ''];
+    setNewFields(updateFields);
+    setResult(false);
+    setCounter(0);
   };
 
   return (
@@ -191,12 +216,23 @@ function App() {
 
       <div className="container">
         {newFields.map((field, index) => (
-          <div className="cell" onClick={() => handleClick(index)}>
+          <div
+            className="cell"
+            onClick={!result ? () => handleClick(index) : undefined}
+            key={index}
+          >
             <Cell text={field} />
           </div>
         ))}
       </div>
-      {result && <div className="result">Game Over {resultMessage}</div>}
+      {result && (
+        <div className="result">
+          <span>Game Over {resultMessage}</span>
+          <button className="restart-button" onClick={handleRestart}>
+            Restart Game
+          </button>
+        </div>
+      )}
     </div>
   );
 }
