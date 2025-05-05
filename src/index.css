@@ -29,12 +29,14 @@ body {
   cursor: pointer;
   color: green;
   font-size: 32px;
+  border: 4px solid greenyellow;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  border: 4px solid greenyellow;
 }
 
 .result {
@@ -49,4 +51,5 @@ body {
 .restart-button {
   margin-top: 10px;
   padding: 10px;
+  border-radius: 10px;
 }
