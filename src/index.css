@@ -11,10 +11,12 @@ h1 {
   margin-bottom: 10px;
 }
 
-body {
+.App {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .cell {
