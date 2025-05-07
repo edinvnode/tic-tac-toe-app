@@ -213,7 +213,7 @@ function App() {
   return (
     <div className="App">
       <h1>Tic Tac Toe App</h1>
-
+      <h2>{counter % 2 == 0 ? 'Player 1 Turn' : 'Player 2 Turn'}</h2>
       <div className="container">
         {newFields.map((field, index) => (
           <div
