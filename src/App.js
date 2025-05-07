@@ -26,7 +26,7 @@ function App() {
         updateFields[2] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
 
@@ -36,7 +36,7 @@ function App() {
         updateFields[5] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
 
@@ -46,7 +46,7 @@ function App() {
         updateFields[8] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
 
@@ -56,7 +56,7 @@ function App() {
         updateFields[6] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
 
@@ -66,7 +66,7 @@ function App() {
         updateFields[7] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
 
@@ -76,7 +76,7 @@ function App() {
         updateFields[8] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
 
@@ -86,7 +86,7 @@ function App() {
         updateFields[8] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
 
@@ -96,7 +96,7 @@ function App() {
         updateFields[6] === 'X'
       ) {
         setResult(true);
-        setResultMessage('Player X has won');
+        setResultMessage('Player 1 has won');
         setCounter(0);
       }
     }
@@ -116,7 +116,7 @@ function App() {
         updateFields[2] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
 
@@ -126,7 +126,7 @@ function App() {
         updateFields[5] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
 
@@ -136,7 +136,7 @@ function App() {
         updateFields[8] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
 
@@ -146,7 +146,7 @@ function App() {
         updateFields[6] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
 
@@ -156,7 +156,7 @@ function App() {
         updateFields[7] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
 
@@ -166,7 +166,7 @@ function App() {
         updateFields[8] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
 
@@ -176,7 +176,7 @@ function App() {
         updateFields[8] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
 
@@ -186,7 +186,7 @@ function App() {
         updateFields[6] === 'O'
       ) {
         setResult(true);
-        setResultMessage('Player O has won');
+        setResultMessage('Player 2 has won');
         setCounter(0);
       }
     }
